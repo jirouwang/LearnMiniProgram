@@ -1,6 +1,17 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello world</text>
-<button size="mini">点击</button>
 
-<view>1.武大</view>
-<view>hahaha</view>
+<!-- 1.小程序数据绑定 -->
+<view>hello {{name}}</view>
+<view>年龄 {{age}}</view>
+
+<!-- 2.列表展示 -->
+<view>{{students[0].name}}</view>
+<view>{{students[1].name}}</view>
+<view>{{students[2].name}}</view>
+<view>{{students[3].name}}</view>
+<view wx:for="{{students}}">{{item.name}}-{{item.age}}</view>
+
+<!-- 3. -->
+<view>当前计数: {{counter}}</view>
+<button size="mini" bindtap="handleButtonClick">+</button>
+<button size="mini" bindtap="handleSubtraction">-</button>

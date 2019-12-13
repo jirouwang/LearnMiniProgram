@@ -1,0 +1,10 @@
+<!--pages/category/category.wxml-->
+<text>pages/category/category.wxml</text>
+
+<view>分类页面</view>
+
+<view>
+  <view>123</view>
+  <view>456</view>
+  <view>789</view>
+</view>
