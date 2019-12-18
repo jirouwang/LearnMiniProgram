@@ -1,6 +1,8 @@
 // pages/home/home.js
+const app = getApp()
+let name = app.globalData.name
+let age = app.globalData.age
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -38,39 +40,39 @@ Page({
       counter: this.data.counter - 1
     })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-
+  handleGetUserInfo(event) {
+    console.log(event)
+    // console.log(app.globalData)
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
+  // 页面的生命周期函数
+  onLoad(options) {
+    let Timestamp = Math.round(new Date() / 1000)
+    let Nonce = Math.floor((Math.random() * 10) + 1) * Timestamp
+    let Signature = ''
+    wx.getUserInfo({
+      success: function(res) {
+        console.log(res)
+        Signature = res.signature
+      }
+    })
+    wx.request({
+      url: `https://iai.tencentcloudapi.com/?Action=CreateGroup&GroupName=计算机11602&FaceModelVersion=3.0&GroupId=jisuanji11602&Version=2018-03-01&Timestamp=${Timestamp}&Nonce=${Nonce}&SecretId=AKIDD1auyzXUu47wVpdqVv52lFVZS6UiFX4K&Signature=${Signature}`,
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
+  onReady() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
+  onShow() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
+  onHide() {
 
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
+  onUnload() {
 
   },
 

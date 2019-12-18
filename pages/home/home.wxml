@@ -5,13 +5,18 @@
 <view>年龄 {{age}}</view>
 
 <!-- 2.列表展示 -->
-<view>{{students[0].name}}</view>
+<!-- <view>{{students[0].name}}</view>
 <view>{{students[1].name}}</view>
 <view>{{students[2].name}}</view>
 <view>{{students[3].name}}</view>
-<view wx:for="{{students}}">{{item.name}}-{{item.age}}</view>
+<view wx:for="{{students}}">{{item.name}}-{{item.age}}</view> -->
 
 <!-- 3. -->
 <view>当前计数: {{counter}}</view>
 <button size="mini" bindtap="handleButtonClick">+</button>
 <button size="mini" bindtap="handleSubtraction">-</button>
+<view>用户信息</view>
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取用户信息</button>
+<view>展示用户信息</view>
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>

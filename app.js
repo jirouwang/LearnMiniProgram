@@ -3,8 +3,9 @@ App({
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
-  onLaunch: function () {
-    console.log("小程序初始化完成")
+  onLaunch: function (options) {
+    // console.log("小程序初始化完成")
+    // console.log(options)
     // 1.获取用户信息 2.发送网络请求(但是一般都是在具体的页面去请求数据)
     wx.getUserInfo({
       success: function(res) {
@@ -14,17 +15,28 @@ App({
     wx.request({
       url: '',
     })
-    setTimeout(()=>{
-      const err = new Error()
-      throw err
-    },3000)
+    // setTimeout(()=>{
+    //   const err = new Error()
+    //   throw err
+    // },3000)
   },
 
   /**界面显示出来之后会执行
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-    console.log("onshow")
+    // 1.判断用户进入小程序的场景
+    // console.log("options", options)
+    switch (options.scene) {
+      case 1001:
+        // console.log(132)
+    }
+    // 2.获取用户信息
+    wx.getUserInfo({
+      success: function(res) {
+        // console.log(res)
+      }
+    })
   },
 
   /**界面被隐藏时执行
@@ -39,5 +51,10 @@ App({
    */
   onError: function (msg) {
     console.log("小程序发生错误")
+  },
+  
+  globalData: {
+    name: 'coderWhy',
+    age: 18
   }
 })
