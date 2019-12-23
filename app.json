@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/home/home",
     "pages/about/about",
     "pages/propfile/propfile",
@@ -9,10 +10,12 @@
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "我的小程序",
-    "backgroundColor": "#ff0000",
+    "backgroundColor": "#000",
     "enablePullDownRefresh": true,
-    "backgroundTextStyle": "light"
+    "backgroundTextStyle": "light",
+    "onReachBottomDistance": 50
   },
+  "sitemapLocation": "sitemap47.json",
   "tabBar": {
     "list": [
       {
@@ -29,6 +32,5 @@
       }
     ],
     "selectedColor": "#ff5777"
-  },
-  "sitemapLocation": "sitemap47.json"
+  }
 }

@@ -1,2 +1,21 @@
 <!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<!-- <text>pages/about/about.wxml</text> -->
+
+<!-- view的使用 -->
+<view class="box" hover-class="pressed" hover-stop-propagation>哈哈哈</view>
+
+<!-- image使用 -->
+<image src="/assets/img/suo.png" style="width:100px;height:100px;display:inline-block"/>
+
+<button bindtap="chooseImg">选择图片</button>
+<image src="{{imgSrc}}" withFix></image>
+
+<!-- bindload: 图片加载完成触发事件 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" 
+       wx:for="{{1}}"
+       bindload="imgLoadedEvent"
+       lazy-load
+       />
+
+<!-- showmenu-longpress -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" show-menu-by-longpress withFix/>

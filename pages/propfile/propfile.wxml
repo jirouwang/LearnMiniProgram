@@ -1,2 +1,32 @@
 <!--pages/propfile/propfile.wxml-->
-<text>pages/propfile/propfile.wxml</text>
+
+<!-- input的使用 -->
+<input bindinput="handleInput"
+       bindfocus="handleFocus"
+       bindblur="handleBlur"
+       bindconfirm="handleConfirm"
+       style="border: 1px solid #000;padding-left: 5px; border-radius: 5px;"
+       placeholder-style="color: #f50"
+       placeholder="123"/>
+
+<!-- scroll-view局部滚动 -->
+<!-- 水平滚动scroll-x -->
+<scroll-view style="white-space: nowrap;background-color: rgba(0,0,0,.2);" scroll-x>
+  <view wx:for="{{10}}" class="scrollViewItem">{{item}}</view>
+</scroll-view>
+
+<!-- 垂直滚动scroll-y -->
+<scroll-view style="height: 300px;margin-top: 10px;background-color: rgba(0,0,0,.2);" scroll-y bindscroll="handleScroll">
+  <view wx:for="{{10}}" class="scrollViewItem2">{{item}}</view>
+</scroll-view>
+
+
+<!-- 水平滚动scroll-x -->
+<scroll-view style="white-space: nowrap;margin-top: 10px;background-color: rgba(0,0,0,.2);" scroll-x>
+  <view wx:for="{{10}}" class="scrollViewItem">{{item}}</view>
+</scroll-view>
+
+<!-- 垂直滚动scroll-y -->
+<scroll-view style="height: 300px;margin-top: 10px;background-color: rgba(0,0,0,.2);" scroll-y>
+  <view wx:for="{{10}}" class="scrollViewItem2">{{item}}</view>
+</scroll-view>

@@ -17,6 +17,14 @@
 <button size="mini" bindtap="handleSubtraction">-</button>
 <view>用户信息</view>
 <button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取用户信息</button>
-<view>展示用户信息</view>
+<view  bindtap="avatorUrlClicked">展示用户信息</view>
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
 <open-data type="userNickName"></open-data>
 <open-data type="userAvatarUrl"></open-data>

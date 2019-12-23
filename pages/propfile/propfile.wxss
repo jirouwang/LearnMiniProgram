@@ -1,1 +1,14 @@
 /* pages/propfile/propfile.wxss */
+.scrollViewItem {
+  width: 100px;
+  height: 100px;
+  background-color: #f50;
+  margin: 10px;
+  display: inline-block;
+}
+
+.scrollViewItem2 {
+  height: 100px;
+  background-color: #f50;
+  margin: 10px;
+}

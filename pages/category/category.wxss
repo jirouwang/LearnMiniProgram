@@ -1,1 +1,5 @@
 /* pages/category/category.wxss */
+.pressed {
+  background-color: #f50;
+  color:#fff;
+}

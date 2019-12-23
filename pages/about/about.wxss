@@ -1,1 +1,12 @@
 /* pages/about/about.wxss */
+.box {
+  background-color: #f50;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+}
+.pressed {
+  background-color: #000;
+  color: #f50;
+  font-size: 18px;
+}
