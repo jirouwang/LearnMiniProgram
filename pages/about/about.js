@@ -6,7 +6,11 @@ Page({
    */
   data: {
     message: '12',
-    imgSrc: ''
+    imgSrc: '',
+    item: 456789,
+    array: [1,2,3,4,56],
+    price: 25.66666
+    
   },
   chooseImg() {
     // console.log('this')
@@ -18,7 +22,19 @@ Page({
       },
     })
   },
-  imgLoadedEvent() {
-    // console.log(123)
+  imgLoadedEvent(e) {
+    console.log(e)
+  },
+  handleTouchStart(event) {
+    console.log(event)
+  },
+  handleTouchEnd(event) {
+    console.log(event)
+  },
+  clickOuter(event) {
+    console.log(event)
+  },
+  clickInner(event) {
+    console.log(event)
   }
 })

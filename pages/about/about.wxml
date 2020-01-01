@@ -13,9 +13,22 @@
 <!-- bindload: 图片加载完成触发事件 -->
 <image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" 
        wx:for="{{1}}"
-       bindload="imgLoadedEvent"
+       bindtap="imgLoadedEvent"
        lazy-load
+       style="width: 100vw"
+       wx:key="index"
+       bind:touchstart="handleTouchStart"
+       bind:touchend="handleTouchEnd"
        />
 
 <!-- showmenu-longpress -->
 <image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" show-menu-by-longpress withFix/>
+
+<view wx:for="{{array}}" wx:key="index">{{item}}</view>
+
+<wxs src="../../wxs/format.wxs" module="info"/>
+<view>{{info.priceFormat(price)}}</view>
+
+<view style="width:400rpx;height:400rpx;background:red" bindtap="clickOuter" id="outer">
+  <view style="width:200rpx;height:200rpx;background:blue"  id="inner"></view>
+</view>
