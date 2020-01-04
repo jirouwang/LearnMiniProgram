@@ -1,3 +1,5 @@
+//wxs文件只能用es5，不能用es6
+
 function priceFormat(price) {
   return price.toFixed(2);
 }

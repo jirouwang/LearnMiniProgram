@@ -19,6 +19,7 @@
        wx:key="index"
        bind:touchstart="handleTouchStart"
        bind:touchend="handleTouchEnd"
+       show-menu-by-longpress
        />
 
 <!-- showmenu-longpress -->

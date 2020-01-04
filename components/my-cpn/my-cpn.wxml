@@ -1,0 +1,8 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<!-- <text>components/my-cpn/my-cpn.wxml</text> -->
+
+<view>组件的counter: {{counter}}</view>
+<view class="title titleclass">{{title}}</view>
+<button bind:tap="handleIncrement" size="mini">+1</button>
+
+<!-- <view>自定义组件最好使用  my-cpn 用-分隔的这种形式 而不用大写的驼峰， 但是用驼峰命名没有问题</view> -->

@@ -1,0 +1,10 @@
+/* pages/componentuse/componentuse.wxss */
+.red-color {
+  color: red;
+}
+.blue-color {
+  color: blue;
+}
+.orange-color {
+  color: orange;
+}

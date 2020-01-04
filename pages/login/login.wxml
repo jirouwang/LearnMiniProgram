@@ -1,2 +1,8 @@
 <!--pages/login/login.wxml-->
 <text>pages/login/login.wxml</text>
+
+<!-- 1.Toast -->
+<button size="mini" bind:tap="handleToast">Toast</button>
+
+<!-- 2.Modal -->
+<button size="mini" bind:tap="handleModal">Modal</button>

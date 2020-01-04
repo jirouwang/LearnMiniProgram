@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/componentuse/componentuse",
+    "pages/event/event",
     "pages/login/login",
     "pages/home/home",
     "pages/about/about",
@@ -16,6 +18,9 @@
     "onReachBottomDistance": 50
   },
   "sitemapLocation": "sitemap47.json",
+  "usingComponents": {
+    "my-cpn": "/components/my-cpn/my-cpn"
+  },
   "tabBar": {
     "list": [
       {
@@ -32,5 +37,5 @@
       }
     ],
     "selectedColor": "#ff5777"
-  }
+  } 
 }

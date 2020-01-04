@@ -1,0 +1,9 @@
+<!--pages/event/event.wxml-->
+<text>pages/event/event.wxml</text>
+
+
+<view class="container" style="display:flex;">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view style="flex:1;text-align:center;" bind:tap="handleClickEvent" data-index="{{index}}" data-item="{{item}}">{{item}}</view>
+  </block>
+</view>

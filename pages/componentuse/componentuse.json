@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "TextCpn": "/components/TextCpn/TextCpn",
+    "wxcpn": "/components/wx-cpn/wx-cpn",
+    "tab-control": "/components/tab-control/tab-control",
+    "my-slot": "/components/my-slot/my-slot",
+    "my-multslot": "/components/my-multslot/my-multslot"
+  }
+}

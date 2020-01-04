@@ -1,0 +1,55 @@
+<!--pages/componentuse/componentuse.wxml-->
+<text class="text">pages/componentuse/componentuse.wxml</text>
+<view id="text">123456789</view>
+
+
+<!-- 自定义组件最好使用  my-cpn 用-分隔的这种形式 而不用大写的驼峰， 但是用驼峰命名没有问题 -->
+<!-- 自定义组件my-cpn也可以在app.json里的usingComponents对象里进行全局注册 -->
+
+
+<!-- 自定义组件的样式类名传递问题：已解决，titleclass这个类名也要写进组件的元素里 -->
+
+<button size="mini" bind:tap="handleChCpnCounter">点击改变组件里的counter</button>
+
+<view>使用组件的页面的counter: {{counter}}</view>
+
+
+
+<my-cpn class='tab-counter' title="呵呵呵" titleclass="red-color" bind:increment="handleIncrement"/>
+<my-cpn title="哈哈哈" titleclass="blue-color"/>
+<my-cpn titleclass="orange-color"/>
+
+<view>----------------</view>
+
+<TextCpn />
+
+<!-- 组件命名不能用wx-开头，不然会报错 -->
+<wxcpn />
+
+<!-- 组件和引用组件的页面不能使用id选择器（#a）、属性选择器（[a]）和标签名选择器，请改用class选择器
+而class选择器会有默认的隔离效果，也就是组件样式和使用组件的页面的样式互不影响
+ -->
+
+ <tab-control titles="{{['新款','流行','经典']}}" bind:getTabInfo="handleTabInfo"/>
+
+
+<my-slot>
+<button size="mini">插槽按钮</button>
+</my-slot>
+
+ <my-slot>
+  <text>哈哈哈</text>
+ </my-slot>
+
+<my-slot>
+  <slider value="50"></slider>
+ </my-slot>
+
+<!-- 具名插槽的使用 -->
+<!-- 1.给组件里的slot添加那么属性，再在组件里的元素添加slot指定slot的名称 -->
+<!-- 2.在组件Component里的options对象里添加multpleSlots： true -->
+ <my-multslot>
+  <button size="mini" slot="slot2">具名插槽按钮</button>
+  <slider value="40" slot="slot1"></slider>
+  <view slot="slot3">哈哈哈</view>
+ </my-multslot>
